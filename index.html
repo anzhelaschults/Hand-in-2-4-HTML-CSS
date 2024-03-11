@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindGarden</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="header">
+  <h1>MindGarden</h1>
+  <p class="subtitle">Thoughts - Opinions - Inspiration - Motivation - Ideas - Reflection</p>
+  <div class="date-and-edition">
+    <span id="currentDate">Berlin - 28 FEB - 2024</span>
+    <a href="getstarted.html"><span>Get Started</span></a>
+  </div>
+</header>
+
+<main class="content">
+  <article class="main-article">
+    <h2>Reflective Pages for Your Personal Growth</h2>
+    <!-- <h2>Reflective Pages for Your Personal Growth</h2> -->
+    <!-- <p>Start your day with thisPAPER. Read it. Have anything to say? Write it and post it. This is the right place. </p> -->
+    <p>Every week can start from Wednesday.</p>
+    <!-- <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/IMG_thisPaper.jpeg" alt="Berlin"> -->
+    <!-- <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/IMG_thisPaper.jpeg" alt="Berlin"> -->
+    <!-- <img src="https://www.instagram.com/p/C1C2YmtNqV1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Berlin"> -->
+  </article>
+
+  <section class="columns">
+    <div class="column">
+      <img src="/img/blog.jpeg" alt="Berlin">
+      <h3>Wednesday</h3>
+      <p>Let's start every week from Wednesday.</p>
+    </div>
+    <div class="column">
+      <img src="/img/reflection.jpeg" alt="Berlin">
+      <h3>Thursday</h3>
+      <p>This day is reserved for anything you are interested in.</p>
+    </div>
+    <div class="column">
+      <img src="/img/IMG_thisPaper.jpeg" alt="Berlin">
+      <h3>Friday</h3>
+      <p>Dare to do what you don’t want to do.</p>
+      <!-- <p>&#x1F422; is better than &#x1FACF;</p> -->
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; my Blog. All rights reserved.</p>
+  <p>Made in Berlin &hearts;</p>
+</footer>
+<script>
+
+  function formatDate(date) {
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    return `Berlin - ${date.toLocaleDateString('en-US', options)}`;
+  }
+
+
+  const currentDate = new Date();
+
+
+  document.getElementById('currentDate').textContent = formatDate(currentDate);
+</script>
+</body>
+</html>
+

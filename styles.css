@@ -1,0 +1,279 @@
+
+
+
+body {
+    /* font-family: 'Times New Roman', serif; */
+    font-family: 'Georgia', serif;
+
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    text-align: center;
+    border-bottom: 4px double #A020F0;
+    padding: 20px 0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 50px;
+  }
+  
+  .subtitle {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .date-and-edition {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .main-article {
+    text-align: center;
+  }
+  
+  .main-article h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* .main-article img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  } */
+
+
+  .main-article img {
+    width: 100%;
+    height: auto;
+    max-width: 550px; 
+    display: block; 
+    margin: 20px auto; 
+  }
+
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: 30%;
+  }
+  
+  .column h3 {
+    font-size: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+  }
+
+  .column img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap; /* Allow the columns to wrap onto the next line */
+    justify-content: space-between; /* Keep the existing spacing */
+  }
+  
+  .column {
+    width: calc(33.333% - 10px); /* Adjust the width to be a third minus the gutter */
+    margin-bottom: 20px; /* Add some space between the rows */
+    /* If you have a gutter between columns, subtract half of it from the width */
+  }
+  
+  /* Clear the float for the first .column in a new row */
+  .column:nth-child(3n+1) {
+    clear: both;
+  }
+  
+  
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #000;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+
+  /* Existing styles from index.html */
+/* ... */
+
+/* New styles for getstarted.html */
+.account-creation {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.account-creation h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.account-subtitle {
+  margin-bottom: 20px;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.account-form button {
+  padding: 10px;
+  background-color: #A020F0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.account-form button:hover {
+  background-color: #8B008B;
+}
+
+.alternative {
+  margin-top: 20px;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #A020F0;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.date-and-edition a {
+  text-decoration: none; 
+  color: #A020F0; 
+  font-weight: bold; 
+  background-color: transparent; 
+  padding: 5px 10px; 
+  border: 2px solid #A020F0; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
+}
+
+.date-and-edition a:hover {
+  background-color: #A020F0; 
+  color: white; 
+  text-decoration: none; 
+}
+
+/* page login */
+
+/* Add the existing styles here */
+
+/* New styles for login.html */
+.apple-btn, .google-btn {
+  background-color: #000; /* Black for Apple, adjust for Google if needed */
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.apple-btn:hover, .google-btn:hover {
+  opacity: 0.8;
+}
+
+/* Adjust the .apple-btn background color for Apple's style */
+.apple-btn {
+  background-color: #f5f5f7; /* Light grey for Apple */
+  color: #000; /* Black text for Apple */
+}
+
+/* Adjust the .google-btn background color for Google's style */
+.google-btn {
+  background-color: #fff; /* White for Google */
+  color: #000; /* Black text for Google */
+  border: 1px solid #ccc; /* Light grey border for Google */
+}
+
+/* yourgarden. modal window*/
+#addNewDay {
+  background-color: #A020F0; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  margin-top: 20px;
+  text-transform: uppercase; 
+  font-weight: bold; 
+  outline: none; 
+}
+
+#addNewDay:hover {
+  background-color: #8f19db; /* Slightly darker purple on hover */
+}
+
+
+#newDayModal {
+  display: none; /* Keep it hidden until triggered */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Approximate width to match the .columns content width */
+  max-width: 1024px; /* Optional: Set a max-width if there is one for the .columns */
+  margin: 0 auto; /* Center the modal */
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+
+#newDayText {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#submitNewDay {
+  padding: 10px 20px;
+  background-color: #A020F0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
