@@ -42,7 +42,7 @@
   
   
 
-  <section class="columns">
+  <!-- <section class="columns">
     <div class="column">
       <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/blog.jpeg" alt="Berlin">
       <h3>Wednesday</h3>
@@ -57,17 +57,19 @@
       <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/IMG_thisPaper.jpeg" alt="Berlin">
       <h3>Friday</h3>
       <p>Dare to do what you don’t want to do.</p>
-      <!-- <p>&#x1F422; is better than &#x1FACF;</p> -->
     </div>
+  </section> -->
+
+  <section class="columns">
+    <% posts.forEach(function(post) { %>
+      <div class="column">
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+        <a href="/edit/<%= post._id %>">Edit</a>
+        <a href="/delete/<%= post._id %>" onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>
+      </div>
+    <% }); %>
   </section>
-  
-
-
-<footer class="footer">
-  <p>&copy; my Blog. All rights reserved.</p>
-  <p>Made in Berlin &hearts;</p>
-</footer>
-<script>
 
   function formatDate(date) {
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
