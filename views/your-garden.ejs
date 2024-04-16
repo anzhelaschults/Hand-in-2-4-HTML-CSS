@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MindGarden</title>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -25,18 +25,22 @@
   <input type="text" name="title" placeholder="Title" required>
   <textarea name="content" placeholder="Content" required></textarea>
   <button type="submit">Add Post</button>
-
-  <section class="columns">
-    <% data.forEach(function(day) { %>
-      <div class="column">
-        <h3><%= day.title %></h3>
-        <p><%= day.content %></p>
-        <a href="/edit/<%= day._id %>">Edit</a>
-        <a href="/delete/<%= day._id %>" onclick="return confirm('Are you sure you want to delete this day?')">Delete</a>
-      </div>
-    <% }); %>
-  </section>
 </form>
+
+<section class="columns">
+  <% data.forEach(function(day) { %>
+    <div class="column">
+      <h3><%= day.title %></h3>
+      <p><%= day.content %></p>
+
+      <a href="/edit/<%= day._id %>">Edit</a>
+      <form class="column-control-form" action="/delete/<%= day._id %>" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+      <!-- <a href="/delete/<%= day._id %>" onclick="return confirm('Are you sure you want to delete this day?')">Delete</a> -->
+    </div>
+  <% }); %>
+</section>
 
     <script>
       function formatDate(date) {

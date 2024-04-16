@@ -81,14 +81,16 @@ app.post('/edit/:id', async function(req, res) {
     const result = await cursor.toArray()
 
     console.log('result', result)
-    res.render('your-garden', { data: result });
+    // res.render('your-garden', { data: result });
+    res.redirect('/your-garden');
+
   } catch (error) {
     console.log(error)
     res.status(500).status('Internal server error')
   }
 });
 
-app.get('/delete/:id', async function(req, res) {
+app.post('/delete/:id', async function(req, res) {
 
   await client.connect();
   const database = client.db('MindDB');
@@ -100,7 +102,7 @@ app.get('/delete/:id', async function(req, res) {
     const cursor = await posts.find()
     const result = await cursor.toArray()
 
-    res.render('your-garden', "text/css", { data: result });
+    res.redirect('/your-garden');
   } catch (error) {
     console.log(error)
     res.status(500).status('Internal server error')
