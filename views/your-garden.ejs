@@ -13,7 +13,10 @@
   <p class="subtitle">Think about this week, how would you like to spend it?</p>
   <div class="date-and-edition">
     <span id="currentDate">Berlin - 28 FEB - 2024</span>
-    <button id="addNewDay">add new day +</button>
+    <a href="index.html">
+      <button id="addNewDay">Blog</button>
+    </a>
+    
   </div>
 </header>
 
@@ -22,25 +25,6 @@
   <input type="text" name="title" placeholder="Title" required>
   <textarea name="content" placeholder="Content" required></textarea>
   <button type="submit">Add Post</button>
-</form>
-  
-  <section class="columns">
-    <div class="column">
-      <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/blog.jpeg" alt="Berlin">
-      <h3>Wednesday</h3>
-      <p>Let's start every week from Wednesday.</p>
-    </div>
-    <div class="column">
-      <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/reflection.jpeg" alt="Berlin">
-      <h3>Thursday</h3>
-      <p>This day is reserved for anything you are interested in.</p>
-    </div>
-    <div class="column">
-      <img src="/Users/anzhelaschults/code_dev_projects/My-Vintage-Blog/img/IMG_thisPaper.jpeg" alt="Berlin">
-      <h3>Friday</h3>
-      <p>Dare to do what you don’t want to do.</p>
-    </div>
-  </section>
 
   <section class="columns">
     <% data.forEach(function(day) { %>
@@ -52,7 +36,7 @@
       </div>
     <% }); %>
   </section>
-
+</form>
 
     <script>
       function formatDate(date) {
@@ -64,7 +48,28 @@
 
       window.history.replaceState({}, '',  '/your-garden')
     </script>
+
 </script>
 </body>
 </html>
 
+
+<!-- </form>
+  
+  <section class="columns">
+    <div class="column">
+      <img src="img/blog.jpeg" alt="Berlin">
+      <h3>Wednesday</h3>
+      <p>Let's start every week from Wednesday.</p>
+    </div>
+    <div class="column">
+      <img src="img/reflection.jpeg" alt="Berlin">
+      <h3>Thursday</h3>
+      <p>This day is reserved for anything you are interested in.</p>
+    </div>
+    <div class="column">
+      <img src="img/IMG_thisPaper.jpeg" alt="Berlin">
+      <h3>Friday</h3>
+      <p>So what do we do today?</p>
+    </div>
+  </section> -->
