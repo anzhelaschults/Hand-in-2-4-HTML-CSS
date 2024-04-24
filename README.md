@@ -1,9 +1,3 @@
-Hand-in 4/4 Requirements:
-
-#### Errror Workaround message:
-
-"Refused to apply style from 'http://localhost:3000/delete/css/styles.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
-
 # MindGarden
 
 Welcome to MindGarden, a personal journaling app designed to help you organize your thoughts, ideas, and inspirations throughout the week. In the next phase we will add AI feedback functionality.
